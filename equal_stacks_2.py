@@ -23,14 +23,17 @@ def equalStacks(h1, h2, h3):
     for elem in min_stack:
         if elem in h_1 and elem in h_2 and elem in h_3:
             return elem
+        else:
+            return 0
 
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    #fptr = open(os.environ['OUTPUT_PATH'], 'w')
     first_multiple_input = input().rstrip().split()
     h1 = list(map(int, input().rstrip().split()))
     h2 = list(map(int, input().rstrip().split()))
     h3 = list(map(int, input().rstrip().split()))
     result = equalStacks(h1, h2, h3)
-    fptr.write(str(result) + '\n')
-    fptr.close()
+    print(result)
+    #fptr.write(str(result) + '\n')
+    # fptr.close()
